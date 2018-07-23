@@ -1,0 +1,34 @@
+Map == key, value를 쌍으로 저장하는 자료구조
+//key는 set으로 설정한다 
+//구현된 클래스는 Hashmap(순서모음), LinkedHashMap(순서기억), TreeMap(정렬)
+
+메소드 void put(키,값) = 저, 동일한 키가 있으면 갱신
+Object get(키) = 키에 해당하는 데이터 리턴 만들때 generic을 사용하면 없는 키를입력하면 null; 리턴
+Remove (키)
+
+Byte Stream == 바이트 단위, 텍스트는 제외   ->FileinputStream  -> BufferedInputStream
+-> FIleoutStream -> Print Stream
+
+Character Stream -> FileReader -> Buffered Reader
+-> FileWriter -> PrintWriter
+1. access_log.txt 파일을 읽을 수 있는 Stream을 생성
+2. 줄단위를 읽는 코드 생성
+3. 줄 단위로 읽은 데이터를 가지고 Ip 별 접속횟수를 계산.
+
+로그 파일을 읽어서 ip별 접속 횟수 출력하기
+1. 로그파일을 읽을 수 있는 스트림을 생성합니다.
+로그 파일은 문자열이 기록된 파일이므로 Character Stream을 이용해야 합니다.
+읽을 때는 네이티브 메소드 호출횟수를 줄이기 위해서 버퍼를 사용해서 읽고 쓰는 것이 좋습니다.
+BufferedReader를 이용해서 읽는 것이 좋습니다.
+
+3. 줄단위로 읽은 데이터를 공백으로 분할해서 첫번째에 있는 데이터만 출력
+문자열을 분할을 할 때는 split 이나 substring 이라는 메소드를 이용합니다.
+
+4. HashMap을 활용해서 첫번째 데이터의 횟수를 저장하고 출력하기
+==Map은 동일한 키를 가지고 데이터를 저장하면 수정이 발생하고 없는 키의 값을 읽을려고 하면 null을 리턴합니다.
+
+5. 트래픽을 한줄을 기준으로 공백으로 분할하면 10번째에 존
+
+PrintWriter
+파일이나 네트워크에서 문자 단위로 데이터를 전송하기 위한 클래스
+버퍼링을 이용해서 전송을 하기 때문에 네이티브 메소드 횟수를 줄여서 출력 효율을 높여 줍니다.
